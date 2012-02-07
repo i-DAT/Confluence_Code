@@ -327,15 +327,6 @@ public int[] getAnalog(int index) {
 public int getTotalSamples() {
   return totalSamples;
 }
-
-
-
-
-//-----------------------------20673775781295449861861645291
-//Content-Disposition: form-data; name="Item.Attachment.unused"
-
-//0  
-
 public void drawBarChart(int val1,int val2,int val3,int val4){
   /*println(val1);
   println(val2);
