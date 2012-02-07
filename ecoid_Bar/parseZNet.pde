@@ -204,7 +204,16 @@ public void parseZNetFrame() {
       for (int i=0; i<dataADC.length; i++) {
         finalPacket[1][i]=dataADC[i];
       }
+    }*/
+    
+    //get XBee unique ID
+    XBeeID = "";
+    for (int i = 2; i<= 8; i++) { 
+      XBeeID = XBeeID + hex(dataArray[i],2);
+      
     }
+    print("XBeeID = " + XBeeID);
+    println();
 
     println("addr = " + addr);
     for (int j=0; j<4; j++) {
@@ -233,12 +242,7 @@ public void parseZNetFrame() {
     //addAnalog(dataADC);
   }
   
-  //get XBee unique ID
-  for (int i = 2; i<= 8; i++) { 
-    XBeeID = hex(dataArray[i],2);
-    print(XBeeID); 
-  }
-  println();
+  
   
 }
 
