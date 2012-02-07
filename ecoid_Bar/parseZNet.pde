@@ -194,7 +194,7 @@ public void parseZNetFrame() {
     }
     println();
 
-    if (addr == ECOIDS[0]) {
+    /*if (addr == ECOIDS[0]) {
       for (int i=0; i<dataADC.length; i++) {
         finalPacket[0][i]=dataADC[i];
       }
@@ -214,8 +214,8 @@ public void parseZNetFrame() {
       String[] s = loadStrings(sendString);*/
     }
 
-    for (int i=0; i<2; i++) {
-      print("ecoid" + i);
+   // for (int i=0; i<2; i++) {
+      /*print("ecoid" + i);
       print(ECOIDS[i]);
       print(": ");
       for (int j=0; j<4; j++) {

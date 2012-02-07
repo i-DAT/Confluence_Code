@@ -86,8 +86,8 @@ void setup() {
   finalPacket = new int[2][4]; 
   ECOIDS = new int[2];
 
-  ECOIDS[0] = 19761;
-  ECOIDS[1] = 2;
+  //ECOIDS[0] = 19761;
+  //ECOIDS[1] = 2;
 
   sensorArray = new String[4];
 
