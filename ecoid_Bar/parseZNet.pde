@@ -149,40 +149,12 @@ public void parseZNetFrame() {
       analogChannels = analogChannels >> 1; // then shifting over one bit at a time as we go
     }
 
-    //draw rectangles
-     /*colours
- stroke(0, 255, 255);
- stroke(255, 0, 0);
-  stroke(0, 255, 0);
-  stroke(0, 0, 255);
- */
+    //draw bar chart to the screen
  
+    drawBarChart(dataADC[0], dataADC[1], dataADC[2], dataADC[3]);
+    
     //fill(255, 237, 0);
-    fill(0, 255, 255);
-    stroke(0, 255, 255);
-    //rect(bar1_X, bar_Y + bar_height - dataADC[0]/10, bar_width, dataADC[0]/10);
-    float bar1_values = (((float)dataADC[0]/1023) * 100) * 4;
-    float bar2_values = (((float)dataADC[1]/1023) * 100) * 4;
-    float bar3_values = (((float)dataADC[2]/1023) * 100) * 4;
-    float bar4_values = (((float)dataADC[3]/1023) * 100) * 4;
-    //bar1_values = (float)dataADC[0] / 1024;
-    println(bar1_values);
-    rect(bar1_X, bar_Y + bar_height - bar1_values, bar_width, bar1_values);
-    
-    fill(255, 0, 0);
-    stroke(255, 0, 0);
-    rect(bar2_X, bar_Y + bar_height - bar2_values, bar_width, bar2_values);
-    
-    fill(0, 255, 0);
-    stroke(0, 255, 0);
-    rect(bar3_X, bar_Y + bar_height - bar3_values, bar_width, bar3_values);
-    
-    fill(0, 0, 255);
-    stroke(0, 0, 255);
-    rect(bar4_X, bar_Y + bar_height - bar4_values, bar_width, bar4_values);
-    
-    fill(0);
-    stroke(0);
+   
 
     try {
       String time = Calendar.getInstance().getTime().toString();
@@ -355,3 +327,37 @@ public int getTotalSamples() {
 
 //0  
 
+public void drawBarChart(int val1,int val2,int val3,int val4){
+  /*println(val1);
+  println(val2);
+  println(val3);
+  println(val4);*/
+  
+    //Draw Values onto Bar Chart
+    fill(0, 255, 255);
+    stroke(0, 255, 255);
+    //rect(bar1_X, bar_Y + bar_height - dataADC[0]/10, bar_width, dataADC[0]/10);
+    float bar1_values = (((float)val1/1023) * 100) * 4;
+    float bar2_values = (((float)val2/1023) * 100) * 4;
+    float bar3_values = (((float)val3/1023) * 100) * 4;
+    float bar4_values = (((float)val4/1023) * 100) * 4;
+    //bar1_values = (float)dataADC[0] / 1024;
+    //println(bar1_values);
+    rect(bar1_X, bar_Y + bar_height - bar1_values, bar_width, bar1_values);
+    
+    fill(255, 0, 0);
+    stroke(255, 0, 0);
+    rect(bar2_X, bar_Y + bar_height - bar2_values, bar_width, bar2_values);
+    
+    fill(0, 255, 0);
+    stroke(0, 255, 0);
+    rect(bar3_X, bar_Y + bar_height - bar3_values, bar_width, bar3_values);
+    
+    fill(0, 0, 255);
+    stroke(0, 0, 255);
+    rect(bar4_X, bar_Y + bar_height - bar4_values, bar_width, bar4_values);
+    
+    fill(0);
+    stroke(0);
+  
+}
