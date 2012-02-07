@@ -91,10 +91,12 @@ void setup() {
 
   sensorArray = new String[4];
 
-  sensorArray[2] = "_light";
-  sensorArray[3] = "_stretch";
   sensorArray[0] = "_humidity";
   sensorArray[1] = "_temp";
+  sensorArray[2] = "_light";
+  sensorArray[3] = "_stretch";
+  
+  
 }
 
 void draw() {
