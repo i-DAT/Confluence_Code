@@ -16,9 +16,9 @@ int totalSamples = -1;
 ArrayList digitalSamples;
 ArrayList analogSamples;
 
-String sendString;
 String XBeeID;
 
+String sendString;
 
 String LastReport;
 
@@ -109,6 +109,7 @@ public void parseZNetFrame() {
      }
      println();
      */
+     
     // Process Analog 
     int[] dataADC = {
       -1, -1, -1, -1
@@ -218,26 +219,28 @@ public void parseZNetFrame() {
     println("addr = " + addr);
     for (int j=0; j<4; j++) {
 
-      /*sendString = "http://www.eco-os.org/ecoidCollect.php?name=" + addr + sensorArray[j] + "&value=" + dataADC[j];
+      //sendString = "http://www.eco-os.org/ecoidCollect.php?name=" + addr + sensorArray[j] + "&value=" + dataADC[j];
+      sendString = "http://www.eco-os.org/ecoidCollect.php?name=" + XBeeID + sensorArray[j] + "&value=" + dataADC[j];
       println(sendString);
-      String[] s = loadStrings(sendString);*/
+      //String[] s = loadStrings(sendString);
     }
+    LastReport = Calendar.getInstance().getTime().toString();
 
    // for (int i=0; i<2; i++) {
       /*print("ecoid" + i);
       print(ECOIDS[i]);
-      print(": ");
-      for (int j=0; j<4; j++) {
+      print(": ");*/
+     // for (int j=0; j<4; j++) {
 
         /*sendString = "http://www.eco-os.org/ecoidCollect.php?name=" + addr + sensorArray[j] + "&value=" + dataADC[j];
         println(sendString);
         String[] v = loadStrings(sendString)*/
-        print(finalPacket[i][j]);
-        print(", ");
-      }
-      println();
-      LastReport = Calendar.getInstance().getTime().toString();
-    } 
+        /*print(finalPacket[i][j]);
+        print(", ")*/
+      //}
+     // println();
+      //LastReport = Calendar.getInstance().getTime().toString();
+    //}
     // Put Analog in object
     //addAnalog(dataADC);
   }
