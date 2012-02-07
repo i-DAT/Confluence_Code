@@ -17,6 +17,7 @@ ArrayList digitalSamples;
 ArrayList analogSamples;
 
 String sendString;
+String XBeeID;
 
 
 String LastReport;
@@ -231,6 +232,14 @@ public void parseZNetFrame() {
     // Put Analog in object
     //addAnalog(dataADC);
   }
+  
+  //get XBee unique ID
+  for (int i = 2; i<= 8; i++) { 
+    XBeeID = hex(dataArray[i],2);
+    print(XBeeID); 
+  }
+  println();
+  
 }
 
 public void setAddress16(int address) {
