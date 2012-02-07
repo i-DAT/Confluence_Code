@@ -18,10 +18,6 @@ ArrayList analogSamples;
 
 String sendString;
 
-PFont humidityData;
-PFont stretchData;
-PFont tempData;
-PFont lightData;
 
 String LastReport;
 
