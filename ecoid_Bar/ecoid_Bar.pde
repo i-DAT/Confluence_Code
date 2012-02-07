@@ -131,12 +131,6 @@ void draw() {
  image(logo, bar1_X + 400, text_Y);
  //image(logo, 0, 0);
 
- /*colours
- stroke(0, 255, 255);
- stroke(255, 0, 0);
-  stroke(0, 255, 0);
-  stroke(0, 0, 255);
- */
 
   fill(0);
   
