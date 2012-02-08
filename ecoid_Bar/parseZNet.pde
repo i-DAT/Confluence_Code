@@ -44,7 +44,7 @@ public void parseZNetFrame() {
   int addr=5;
   setAddress16(addr);
 
-  println(addr);
+  //println(addr);
   // Reading the options
   int options = dataArray[11];
   // DO NOTHING WITH OPTIONS FOR NOW
