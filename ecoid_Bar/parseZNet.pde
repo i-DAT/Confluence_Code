@@ -158,12 +158,7 @@ public void parseZNetFrame() {
     //fill(255, 237, 0);
    
 
-    try {
-      String time = Calendar.getInstance().getTime().toString();
-      writer.write(time + "\t" + dataADC[0] + "\t" + dataADC[1] + "\t" + dataADC[2] + "\t" + dataADC[3] + "\n");
-      writer.flush();
-    } catch(IOException ioe) {
-    }
+   
 
     //Write values to screen
     
@@ -217,6 +212,7 @@ public void parseZNetFrame() {
     println();
 
     println("addr = " + addr);
+    //send report to server
     for (int j=0; j<4; j++) {
 
       //sendString = "http://www.eco-os.org/ecoidCollect.php?name=" + addr + sensorArray[j] + "&value=" + dataADC[j];
@@ -225,6 +221,14 @@ public void parseZNetFrame() {
       //String[] s = loadStrings(sendString);
     }
     LastReport = Calendar.getInstance().getTime().toString();
+    
+    //Write report to file
+     try {
+      //String time = Calendar.getInstance().getTime().toString();
+      writer.write(LastReport + "\t" + XBeeID + "\t" + dataADC[0] + "\t" + dataADC[1] + "\t" + dataADC[2] + "\t" + dataADC[3] + "\n");
+      writer.flush();
+    } catch(IOException ioe) {
+    }
 
    // for (int i=0; i<2; i++) {
       /*print("ecoid" + i);
