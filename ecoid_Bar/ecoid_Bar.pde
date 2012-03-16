@@ -48,6 +48,7 @@ String[] sensorArray;
 int[] ECOIDS;
 int[] ECOPACKET;
 
+ArrayList Reports;
 void setup() {
   frameRate(1);
   //size(320, 440);
@@ -97,6 +98,7 @@ void setup() {
   sensorArray[3] = "_stretch";
   
   
+  Reports = new ArrayList();
 }
 
 void draw() {
