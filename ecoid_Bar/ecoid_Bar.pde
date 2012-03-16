@@ -130,7 +130,7 @@ void draw() {
   //textFont(stretch);
   text("stretch", bar4_X, text_Y);
   
- image(logo, bar1_X + 400, text_Y);
+ image(logo, bar1_X + 650, text_Y);
  //image(logo, 0, 0);
 
 
