@@ -48,7 +48,9 @@ String[] sensorArray;
 int[] ECOIDS;
 int[] ECOPACKET;
 
+
 ArrayList Reports;
+
 void setup() {
   frameRate(1);
   //size(320, 440);
@@ -96,7 +98,6 @@ void setup() {
   sensorArray[1] = "_temp";
   sensorArray[2] = "_light";
   sensorArray[3] = "_stretch";
-  
   
   Reports = new ArrayList();
 }
@@ -152,14 +153,43 @@ void draw() {
   stroke(0, 0, 255);
   rect(bar4_X, bar_Y, bar_width, bar_height);
   stroke(0);
+  
+      //drawReports
+  if ( Reports.isEmpty() != true){
     //remove oldest report
     if (Reports.size() > 8){
       Reports.remove(0); 
     }
+    
+    //loop through reports
+    for (int i = 0; i != Reports.size(); i++){
+      println("getting" + str(i));
+      EcoidReport report = (EcoidReport) Reports.get(i);
+      
+      println ("Drawing" + report.ID);
+      //report.PrintReport();
+      
+      /*
+      if (i < 4){
+      report.DrawCircles(50 + (150 * i), 100);
+      } else{
+      report.DrawCircles(50 + (150 * (i-4)), 200);
+      }
+      */
+      //report.DrawCircles(350, 100 + (100 * i));
+      
+      if (i < 4){
+        report.DrawCircles(300, 100 + (100 * i));
+      }else{
+        report.DrawCircles(600, 100 + (100 * (i-4)));
+      }
+       
+
+    }
+ }
 
   dataArray = getPacket();
   while (dataArray == null) dataArray = getPacket();
   //  println("dataArray size: "+ dataArray.length);
   parseZNetFrame();
 }
-
