@@ -115,7 +115,7 @@ void draw() {
   fill(255, 237, 0);
   //humidity = createFont("FFScala", 10);
   //textFont(humidity);
-  text("humidity", bar1_X, text_Y);
+  text("humid", bar1_X, text_Y);
   
   //temp = createFont("FFScala", 10);
   //textFont(temp);
