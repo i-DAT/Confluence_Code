@@ -152,6 +152,10 @@ void draw() {
   stroke(0, 0, 255);
   rect(bar4_X, bar_Y, bar_width, bar_height);
   stroke(0);
+    //remove oldest report
+    if (Reports.size() > 8){
+      Reports.remove(0); 
+    }
 
   dataArray = getPacket();
   while (dataArray == null) dataArray = getPacket();
