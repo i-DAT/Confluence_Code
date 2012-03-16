@@ -179,9 +179,17 @@ public void parseZNetFrame() {
     //textFont(stretchData);
     text(dataADC[3], bar4_X, value_Y);
     
-    text("Last Report from " + addr + ":" +  LastReport, bar1_X, value_Y + 20);
+    text("#" + XBeeID, bar1_X, text_Y - 20);
+    
+    //text("Last Report from " + XBeeID + ":" +  LastReport, bar1_X, value_Y + 20);
+    
+    text("Last Report:" +  LastReport, bar1_X, value_Y + 20);
     
     fill(250);
+    
+    Reports.add(new EcoidReport(XBeeID, LastReport, dataADC[0], dataADC[1], dataADC[2], dataADC[3]) );
+    
+
 
 
     for (int i=0; i<dataADC.length; i++) {

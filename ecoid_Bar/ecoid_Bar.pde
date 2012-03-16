@@ -13,7 +13,7 @@ FileWriter writer;
 
 PImage logo;
 
-int width = 1000;
+int width = 1200;
 int height = 600;
 
 //int bar_width = 70;
