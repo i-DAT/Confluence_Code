@@ -18,10 +18,10 @@ int height = 600;
 
 //int bar_width = 70;
 //int bar_height = 400;
-int bar_width = 70;
+int bar_width = 35;
 int bar_height = 400;
 int bar_Y = 95;
-int bar_gap = 20;
+int bar_gap = 15;
 
 int bar_unit = (400 / 1023);
 
