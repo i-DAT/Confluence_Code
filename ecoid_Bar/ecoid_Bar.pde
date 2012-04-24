@@ -1,4 +1,3 @@
-// Example by Tom Igoe
 import java.util.ArrayList;
 import processing.serial.*;
 
@@ -64,8 +63,8 @@ void setup() {
   }
 
     //change this
-   System.setProperty("http.proxyHost","proxy.swgfl.org.uk");
-   System.setProperty("http.proxyPort","8080");
+   //System.setProperty("http.proxyHost","proxy.swgfl.org.uk");
+   //System.setProperty("http.proxyPort","8080");
 
 
 

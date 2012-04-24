@@ -1,3 +1,4 @@
+//Developed by Chris, this class is for the Previous reports 
 class EcoidReport {
   int sensor0,sensor1,sensor2,sensor3;
   String ID,Report;

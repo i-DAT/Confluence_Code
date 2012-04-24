@@ -1,3 +1,4 @@
+//class for grabing XBee packets from the Co-Ord. Pre-Supplied
 public int[] getPacket() {
     boolean gotAPacket = false;    // whether the first byte was 0x7E
     int packetLength = -1;         // length of the dataArray

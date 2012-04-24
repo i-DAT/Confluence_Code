@@ -1,3 +1,4 @@
+//functions for processing and transmitted imformation from Packets coming from the Xbee Neyworks
 import java.util.*;
 
 // if you get a ZNet XBeeDataFrame, pull the parts out:
@@ -226,6 +227,7 @@ public void parseZNetFrame() {
       //sendString = "http://www.eco-os.org/ecoidCollect.php?name=" + addr + sensorArray[j] + "&value=" + dataADC[j];
       sendString = "http://www.eco-os.org/ecoidCollect.php?name=" + XBeeID + sensorArray[j] + "&value=" + dataADC[j];
       println(sendString);
+      //UNCOMMENT BEFORE DEPLOY - This Prevents Uploads during Testing.
       //String[] s = loadStrings(sendString);
     }
     LastReport = Calendar.getInstance().getTime().toString();
